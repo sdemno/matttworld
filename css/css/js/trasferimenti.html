@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trasferimenti — MATTTWORLD</title><link rel="icon" href="images/logo.jpg"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="loader" id="loader"><div class="spinner"></div><p class="eyebrow">CONNESSIONE SICURA</p></div>
+<header class="site"><div class="container nav">
+  <a class="brand" href="index.html"><img src="images/logo.jpg">MATTTWORLD</a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a><a href="banconote.html">Banconote</a><a href="carte.html">Carte</a>
+    <a href="trasferimenti.html" class="active">Trasferimenti</a><a href="quality-check.html">Quality Check</a>
+    <a href="feedback.html">Recensioni</a><a href="faq.html">FAQ</a>
+    <button class="ds-btn ds-btn-outline cart-btn" onclick="openCart()">Carrello <span class="cart-count" id="cartCount" style="display:none">0</span></button>
+  </nav><button class="burger" id="burger">☰</button>
+</div></header>
+
+<section class="container hero">
+  <p class="eyebrow">MODULO 03 / ROUTING P2P</p>
+  <h1 class="mt-4">TRASFERIMENTI PAYPAL</h1>
+  <p class="label mt-6" style="max-width:60ch">Sistema di routing P2P con fondi puliti via exchange terzi. Riceverai direttamente sul tuo conto l'importo selezionato.</p>
+  <span class="ds-badge mt-6">ROUTING SICURO</span>
+  <div class="wrap gap-4 mt-6" style="font-family:var(--font-mono);font-size:.72rem;color:#00ff88cc">
+    <span><span class="dot"></span> LIQUIDITÀ GLOBALE: ONLINE</span><span>NODI ATTIVI: 42</span><span>ENCRYPTION: RSA-4096</span>
+  </div>
+</section>
+
+<section class="container mt-10 grid grid-3">
+  <div class="ds-card product"><span class="ds-badge">BOUNCE · CLEAN</span><h3>TRASFERIMENTO BASE</h3>
+    <p class="label">Ricevi <b style="color:#00ff88">200 €</b> sul tuo PayPal</p>
+    <p class="specs">ETA: 1-4H · NODI: 3 · DISPONIBILITÀ: ALTA</p>
+    <div class="price">€90</div>
+    <button class="ds-btn ds-btn-primary" onclick="addToCart('Trasferimento Base',90)">SELEZIONA</button></div>
+  <div class="ds-card product"><span class="ds-badge">BOUNCE · CLEAN</span><h3>TRASFERIMENTO ADVANCED</h3>
+    <p class="label">Ricevi <b style="color:#00ff88">500 €</b> sul tuo PayPal</p>
+    <p class="specs">ETA: 1-4H · NODI: 5 · DISPONIBILITÀ: ALTA</p>
+    <div class="price">€210</div>
+    <button class="ds-btn ds-btn-primary" onclick="addToCart('Trasferimento Advanced',210)">SELEZIONA</button></div>
+  <div class="ds-card product"><span class="ds-badge">BOUNCE · CLEAN</span><h3>TRASFERIMENTO VIP</h3>
+    <p class="label">Ricevi <b style="color:#00ff88">1.000 €</b> sul tuo PayPal</p>
+    <p class="specs">ETA: 1-4H · NODI: 8 · DISPONIBILITÀ: ALTA</p>
+    <div class="price">€400</div>
+    <button class="ds-btn ds-btn-primary" onclick="addToCart('Trasferimento VIP',400)">SELEZIONA</button></div>
+  <div class="ds-card product"><span class="ds-badge gold">BOUNCE · CLEAN</span><h3>TRASFERIMENTO PREMIUM</h3>
+    <p class="label">Ricevi <b style="color:#ffd700">2.000 €</b> sul tuo PayPal</p>
+    <p class="specs">ETA: 1-4H · NODI: 12 · DISPONIBILITÀ: ALTA</p>
+    <div class="price">€760</div>
+    <button class="ds-btn ds-btn-gold" onclick="addToCart('Trasferimento Premium',760)">SELEZIONA</button></div>
+  <div class="ds-card product"><span class="ds-badge gold">BOUNCE · CLEAN</span><h3>TRASFERIMENTO ELITE</h3>
+    <p class="label">Ricevi <b style="color:#ffd700">5.000 €</b> sul tuo PayPal</p>
+    <p class="specs">ETA: 1-4H · NODI: 18 · DISPONIBILITÀ: ALTA</p>
+    <div class="price">€1.850</div>
+    <button class="ds-btn ds-btn-gold" onclick="addToCart('Trasferimento Elite',1850)">SELEZIONA</button></div>
+  <div class="ds-card product"><span class="ds-badge gold">BOUNCE · CLEAN</span><h3>TRASFERIMENTO MASTER</h3>
+    <p class="label">Ricevi <b style="color:#ffd700">10.000 €</b> sul tuo PayPal</p>
+    <p class="specs">ETA: 1-4H · NODI: 24 · DISPONIBILITÀ: ALTA</p>
+    <div class="price">€3.600</div>
+    <button class="ds-btn ds-btn-gold" onclick="addToCart('Trasferimento Master',3600)">SELEZIONA</button></div>
+</section>
+
+<footer class="site"><div class="container wrap justify-between gap-4">
+  <p>CONNESSIONE CRITTOGRAFATA // CANALE SICURO // v2.4.1</p>
+  <div class="legal-links"><a href="privacy.html">PRIVACY</a><a href="termini.html">TERMINI</a><a href="cookie.html">COOKIE</a></div>
+</div></footer>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer"><header><b class="font-mono">CARRELLO</b><button class="ds-btn ds-btn-outline" onclick="closeCart()">✕</button></header>
+<div class="body" id="cartList"></div><div class="foot">
+<div class="wrap justify-between"><span class="label">SUBTOTALE</span><b id="cartSubtotal">€0</b></div>
+<a class="ds-btn ds-btn-primary" style="width:100%;margin-top:1rem" href="checkout.html">Vai al checkout</a></div></aside>
+<script src="js/app.js"></script>
+</body></html>
