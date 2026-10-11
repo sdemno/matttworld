@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>MATTTWORLD - Portale Sicuro</title>
+<meta name="description" content="Servizi Premium. Circolo operativo riservato, accessibile solo su invito.">
+<link rel="icon" href="images/logo.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="loader" id="loader">
+  <img src="images/logo.jpg" style="width:56px;height:56px;border-radius:999px;border:1px solid rgba(0,255,136,.4)">
+  <div class="spinner"></div>
+  <p class="eyebrow">CONNESSIONE SICURA</p>
+</div>
+
+<!-- Modal lingua -->
+<div class="modal" id="langModal">
+  <div class="ds-card lang-card">
+    <p class="eyebrow" style="text-align:center">SYS://LOCALE.SELECT</p>
+    <h2 class="text-center mt-4" style="font-size:1.3rem">Seleziona la tua lingua</h2>
+    <p class="label text-center mt-4">Scegli la lingua con cui desideri continuare la navigazione.</p>
+    <button class="lang-opt"><span style="font-size:1.5rem">🇮🇹</span> Italiano</button>
+    <button class="lang-opt sel"><span style="font-size:1.5rem">🇬🇧</span> Inglese <span class="ds-badge" style="margin-left:auto">Consigliata</span></button>
+    <button class="lang-opt"><span style="font-size:1.5rem">🇪🇸</span> Spagnolo</button>
+    <button class="ds-btn ds-btn-primary" id="langContinue" style="width:100%;margin-top:1rem">Continua</button>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container nav">
+    <a class="brand" href="index.html"><img src="images/logo.jpg">MATTTWORLD</a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="banconote.html">Banconote</a>
+      <a href="carte.html">Carte</a>
+      <a href="trasferimenti.html">Trasferimenti</a>
+      <a href="quality-check.html">Quality Check</a>
+      <a href="feedback.html">Recensioni</a>
+      <a href="faq.html">FAQ</a>
+      <button class="ds-btn ds-btn-outline cart-btn" onclick="openCart()">Carrello <span class="cart-count" id="cartCount" style="display:none">0</span></button>
+    </nav>
+    <button class="burger" id="burger">☰</button>
+  </div>
+</header>
+
+<section class="hero container">
+  <p class="eyebrow">BENVENUTO NEL SOMMERSO</p>
+  <h1 class="mt-4">UN CIRCOLO OPERATIVO RISERVATO, <span class="hl">ACCESSIBILE SOLO SU INVITO.</span></h1>
+  <p class="label mt-6" style="max-width:52ch">NON DIAMO SPIEGAZIONI E NON CERCHIAMO CLIENTI. FORNIAMO SOLO RISULTATI A CHI SA GIÀ COSA CHIEDERE.</p>
+  <p class="mt-6" style="font-family:var(--font-mono);color:#ffd700">NON SIAMO PER TUTTI. PROBABILMENTE, NEMMENO PER TE.</p>
+  <div class="wrap gap-3 mt-10">
+    <a class="ds-btn ds-btn-primary" href="banconote.html">Esplora i servizi</a>
+    <a class="ds-btn ds-btn-outline" href="https://t.me/MatttWorldOrdini" target="_blank">Entra nel Telegram</a>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>RETE SICURA E PRIVATA</span><span>•</span><span>TRANSAZIONI VERIFICATE</span><span>•</span>
+    <span>MASSIMA PRIVACY</span><span>•</span><span>CANALE SICURO</span><span>•</span>
+    <span>RETE SICURA E PRIVATA</span><span>•</span><span>TRANSAZIONI VERIFICATE</span><span>•</span>
+    <span>MASSIMA PRIVACY</span><span>•</span><span>CANALE SICURO</span><span>•</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="stats">
+    <div class="ds-card stat"><div class="num" data-count="1284">0</div><div class="label">UTENTI ONLINE</div></div>
+    <div class="ds-card stat"><div class="num" data-count="9420">0</div><div class="label">CLIENTI SODDISFATTI</div></div>
+    <div class="ds-card stat"><div class="num" data-count="31572">0</div><div class="label">OPERAZIONI</div></div>
+    <div class="ds-card stat"><div class="num">99.9%</div><div class="label">UPTIME</div></div>
+  </div>
+</div>
+
+<div class="container mt-10 grid grid-2">
+  <div>
+    <p class="eyebrow">SERVIZI</p>
+    <h2 class="mt-4" style="font-size:1.8rem">Cosa facciamo</h2>
+    <div class="grid grid-2 mt-6">
+      <a class="ds-card ds-card-interactive product" href="banconote.html">
+        <span class="ds-badge">LISTINO BANCONOTE</span><h3>BANCONOTE</h3>
+        <p class="desc">GRADE AAA+ | FIBRA COTONE 100% | TEST UV/PENNA GARANTITI.</p></a>
+      <a class="ds-card ds-card-interactive product" href="carte.html">
+        <span class="ds-badge">LISTINO CARTE</span><h3>CARTE_CC</h3>
+        <p class="desc">CLONI EMV | FRESH DATA 48h | PIN + TRACK 1&2 INCLUSI.</p></a>
+      <a class="ds-card ds-card-interactive product" href="trasferimenti.html">
+        <span class="ds-badge">TRASFERIMENTI P2P</span><h3>TRASFERIMENTI</h3>
+        <p class="desc">ROUTING SICURO | PROXY RESIDENZIALI | AMICI/FAMILIARI.</p></a>
+      <a class="ds-card ds-card-interactive product" href="feedback.html">
+        <span class="ds-badge">REGISTRO VERIFICATO</span><h3>FEEDBACK</h3>
+        <p class="desc">RATING 4.9/5 | 98% DEI CLIENTI HA GRADITO IL SERVIZIO.</p></a>
+      <a class="ds-card ds-card-interactive product" href="quality-check.html">
+        <span class="ds-badge">PROVA VISIVA</span><h3>QUALITY CHECK</h3>
+        <p class="desc">FOTO REALI DEL MATERIALE PRIMA DI OGNI SPEDIZIONE.</p></a>
+      <a class="ds-card ds-card-interactive product" href="faq.html">
+        <span class="ds-badge">DOCUMENTAZIONE</span><h3>FAQ &amp; SICUREZZA</h3>
+        <p class="desc">PROTOCOLLI OPERATIVI | GARANZIE | INFO SPEDIZIONI.</p></a>
+    </div>
+  </div>
+  <div>
+    <p class="eyebrow">ULTIMI EVENTI // LIVE FEED</p>
+    <div class="ds-card mt-4" style="padding:1.2rem"><div class="feed" id="feed"></div></div>
+    <a class="ds-card ds-card-interactive product mt-4" href="https://t.me/MatttWorldOrdini" target="_blank">
+      <span class="ds-badge">ENTRA ORA!</span><h3>GRUPPO TELEGRAM</h3>
+      <p class="desc">ENTRA PER RESTARE AGGIORNATO SU TUTTO.</p></a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="container wrap justify-between items-center gap-4">
+    <div>
+      <p>CONNESSIONE CRITTOGRAFATA // CANALE SICURO // v2.4.1</p>
+      <div class="legal-links mt-4">
+        <a href="privacy.html">INFORMATIVA PRIVACY</a>
+        <a href="termini.html">TERMINI E CONDIZIONI</a>
+        <a href="cookie.html">COOKIE POLICY</a>
+      </div>
+    </div>
+    <p>© 2026 MATTTWORLD</p>
+  </div>
+</footer>
+
+<!-- Drawer carrello -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <header><b class="font-mono">CARRELLO</b><button class="ds-btn ds-btn-outline" onclick="closeCart()">✕</button></header>
+  <div class="body" id="cartList"></div>
+  <div class="foot">
+    <div class="wrap justify-between"><span class="label">SUBTOTALE</span><b id="cartSubtotal">€0</b></div>
+    <a class="ds-btn ds-btn-primary" style="width:100%;margin-top:1rem" href="checkout.html">Vai al checkout</a>
+  </div>
+</aside>
+
+<script src="js/app.js"></script>
+</body>
+</html>
