@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAQ — MATTTWORLD</title><link rel="icon" href="images/logo.jpg"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="loader" id="loader"><div class="spinner"></div><p class="eyebrow">CONNESSIONE SICURA</p></div>
+<header class="site"><div class="container nav">
+  <a class="brand" href="index.html"><img src="images/logo.jpg">MATTTWORLD</a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a><a href="banconote.html">Banconote</a><a href="carte.html">Carte</a>
+    <a href="trasferimenti.html">Trasferimenti</a><a href="quality-check.html">Quality Check</a>
+    <a href="feedback.html">Recensioni</a><a href="faq.html" class="active">FAQ</a>
+    <button class="ds-btn ds-btn-outline cart-btn" onclick="openCart()">Carrello <span class="cart-count" id="cartCount" style="display:none">0</span></button>
+  </nav><button class="burger" id="burger">☰</button>
+</div></header>
+
+<section class="container hero">
+  <p class="eyebrow">MODULO 05 / DOCUMENTAZIONE</p>
+  <h1 class="mt-4">FAQ &amp; SICUREZZA</h1>
+  <p class="label mt-6" style="max-width:60ch">Informazioni importanti sul funzionamento del sistema, protocolli operativi, garanzie e info spedizioni.</p>
+  <span class="ds-badge mt-6">DOCS OK</span>
+</section>
+
+<section class="container mt-10 grid grid-2">
+  <div>
+    <h2 class="eyebrow">DOMANDE FREQUENTI</h2>
+    <div class="mt-4" id="faq"></div>
+  </div>
+  <div>
+    <div class="ds-card" style="padding:1.5rem">
+      <p class="eyebrow">CONNESSIONE SICURA</p>
+      <p class="label mt-4">Crittografia end-to-end attiva // Nessun log salvato</p>
+      <h3 class="mt-6">PROTOCOLLI DI SICUREZZA</h3>
+      <ul class="mt-4" style="font-family:var(--font-mono);font-size:.8rem;line-height:2">
+        <li>› Comunicazioni su canali criptati end-to-end</li>
+        <li>› Nessuna conservazione di dati personali</li>
+        <li>› Transazioni anonime tramite crypto</li>
+        <li>› Server offshore in giurisdizioni sicure</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="container wrap justify-between gap-4">
+  <p>CONNESSIONE CRITTOGRAFATA // CANALE SICURO // v2.4.1</p>
+  <div class="legal-links"><a href="privacy.html">PRIVACY</a><a href="termini.html">TERMINI</a><a href="cookie.html">COOKIE</a></div>
+</div></footer>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer"><header><b class="font-mono">CARRELLO</b><button class="ds-btn ds-btn-outline" onclick="closeCart()">✕</button></header>
+<div class="body" id="cartList"></div><div class="foot">
+<div class="wrap justify-between"><span class="label">SUBTOTALE</span><b id="cartSubtotal">€0</b></div>
+<a class="ds-btn ds-btn-primary" style="width:100%;margin-top:1rem" href="checkout.html">Vai al checkout</a></div></aside>
+<script>
+const faqs=[
+ ['Come funziona la spedizione?','Tutti i pacchetti vengono spediti in modalità stealth con packaging anonimo. La confezione esterna non riporta alcun riferimento al contenuto. Utilizziamo corrieri affidabili e forniamo tracking su Telegram. Tempi medi: EU 48-72h, Extra-EU 5-7 giorni.'],
+ ['Accettate pagamenti anonimi?','Sì. Accettiamo Cryptovalute. I pagamenti crypto sono i più veloci e garantiscono anonimato totale.'],
+ ['Come funziona la ricarica PayPal?','Dopo il pagamento, i fondi vengono trasferiti sul tuo PayPal entro 1-4 ore tramite metodo Amici e Familiari. Non ci sono commissioni visibili e il saldo risulta immediatamente disponibile e prelevabile.'],
+ ['Le banconote passano i controlli?','Sì, tutte le nostre banconote sono Grade AAA+ e superano il test della penna anti-falso, la lampada UV e il controllo tattile della fibra di cotone. Sono praticamente indistinguibili.'],
+ ['Come funzionano le carte clonate?','Forniamo carte fisiche con chip funzionante, dati Track 1 e 2 impressi, e PIN verificato. Il saldo indicato è stimato e verificato 24h prima della spedizione. Consigliamo prelievi ATM in orari notturni per massima sicurezza.'],
+ ['Cosa succede se il pacco viene sequestrato?','In caso di problemi doganali documentati (foto del sequestro), provvediamo a una rispedizione gratuita o al rimborso completo. Il tasso di successo è superiore al 98%.'],
+ ['I miei dati sono al sicuro?','Non conserviamo alcun dato personale. Le conversazioni Telegram sono criptate e i log vengono cancellati automaticamente ogni 24 ore.'],
+ ['Posso fare ordini ricorrenti?','Assolutamente sì. I clienti abituali hanno accesso a sconti dedicati e priorità sulle nuove scorte. Dopo il terzo ordine entri nel programma VIP.']
+];
+document.getElementById('faq').innerHTML=faqs.map((f,i)=>`
+  <div class="faq-item"><button class="faq-q">${f[0]}<span>+</span></button><div class="faq-a"><p>${f[1]}</p></div></div>`).join('');
+</script>
+<script src="js/app.js"></script>
+</body></html>
