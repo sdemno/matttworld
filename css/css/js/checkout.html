@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout — MATTTWORLD</title><link rel="icon" href="images/logo.jpg"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="site"><div class="container nav">
+  <a class="brand" href="index.html"><img src="images/logo.jpg">MATTTWORLD</a>
+  <div class="stepper"><span class="on">DATI</span><span>VERIFICA</span><span>PAGAMENTO</span><span>CONFERMA</span></div>
+</div></header>
+
+<section class="container mt-10 grid grid-2" style="align-items:start">
+  <div class="ds-card" style="padding:1.5rem">
+    <p class="eyebrow">STEP 1: SPEDIZIONE E LOGISTICA</p>
+    <p class="label mt-4">INSERISCI I DATI PER LA CONSEGNA ANONIMA</p>
+    <p class="label mt-6">PAESE DI SPEDIZIONE</p>
+    <select class="ds-input mt-4"><option>Italia</option><option>Germania</option><option>Francia</option><option>Spagna</option></select>
+    <p class="label mt-4">EMAIL</p><input class="ds-input mt-4" placeholder="tua@email.com">
+    <p class="label mt-4">CELLULARE</p><input class="ds-input mt-4" placeholder="+39 ...">
+    <p class="label mt-6">INDIRIZZO DI SPEDIZIONE</p>
+    <input class="ds-input mt-4" placeholder="Via / Piazza">
+    <div class="grid grid-2 mt-4">
+      <input class="ds-input" placeholder="N."><input class="ds-input" placeholder="CAP">
+    </div>
+    <div class="grid grid-2 mt-4">
+      <input class="ds-input" placeholder="Città"><input class="ds-input" placeholder="Prov.">
+    </div>
+    <p class="label mt-6">SELEZIONA CORRIERE</p>
+    <div class="grid mt-4" style="gap:.5rem">
+      <label class="ds-card product" style="padding:.8rem;cursor:pointer"><input type="radio" name="cor" checked> POSTE — ECONOMY · 2-4 GG</label>
+      <label class="ds-card product" style="padding:.8rem;cursor:pointer"><input type="radio" name="cor"> BRT — EXPRESS · 2-3 GG</label>
+      <label class="ds-card product" style="padding:.8rem;cursor:pointer"><input type="radio" name="cor"> GLS — 24-48H + IMBALLAGGIO SICURO</label>
+      <label class="ds-card product" style="padding:.8rem;cursor:pointer"><input type="radio" name="cor"> DHL — 24h Assicurata</label>
+    </div>
+  </div>
+
+  <div>
+    <div class="ds-card" style="padding:1.5rem">
+      <p class="eyebrow">RIEPILOGO ORDINE PROTETTO</p>
+      <div id="cartList" class="mt-4"></div>
+      <div class="wrap justify-between mt-6"><span class="label">SPEDIZIONE</span><span>DA CALCOLARE</span></div>
+      <div class="wrap justify-between mt-4"><span class="label">TOTALE</span><b id="cartSubtotal" style="color:#00ff88">€0</b></div>
+    </div>
+    <div class="ds-card mt-4" style="padding:1.5rem">
+      <p class="eyebrow">STEP 2: METODO DI PAGAMENTO</p>
+      <div class="grid mt-4" style="gap:.5rem">
+        <label class="ds-card product" style="padding:.8rem;cursor:pointer"><input type="radio" name="pay" checked> CRYPTO — USDT · <span class="ds-badge">NESSUN RICARICO</span></label>
+        <label class="ds-card product" style="padding:.8rem;cursor:pointer"><input type="radio" name="pay"> BONIFICO BANCARIO · +10%</label>
+        <label class="ds-card product" style="padding:.8rem;cursor:pointer"><input type="radio" name="pay"> BUONI AMAZON · +20%</label>
+      </div>
+      <button class="ds-btn ds-btn-primary mt-6" style="width:100%" onclick="conferma()">CONFERMA ORDINE</button>
+      <p class="label mt-4">L'ordine NON parte finché non invii il codice ordine e la prova di pagamento all'operatore su Telegram.</p>
+    </div>
+    <div class="ds-card mt-4" style="padding:1rem;text-align:center">
+      <a class="ds-btn ds-btn-outline" style="width:100%" href="https://t.me/MatttWorldOrdini" target="_blank">CONTATTA OPERATORE SU TELEGRAM</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="container"><p>CONNESSIONE CRITTOGRAFATA // CANALE SICURO // v2.4.1</p></div></footer>
+<script src="js/app.js"></script>
+<script>
+function conferma(){
+  const code='MW-'+Math.random().toString(36).slice(2,8).toUpperCase();
+  alert('ORDINE CONFERMATO!\nCodice ordine: '+code+'\n\nInvia il codice e la prova di pagamento su Telegram.');
+  localStorage.removeItem('mw_cart');
+}
+</script>
+</body></html>
